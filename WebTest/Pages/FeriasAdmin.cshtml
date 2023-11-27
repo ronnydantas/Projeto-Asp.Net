@@ -1,0 +1,27 @@
+﻿@page
+@model WebTest.Pages.FeriasAdminModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tela de Férias</title>
+</head>
+<body>
+    <h3>Digite o CPF do colaborador que deseja realizar o agendamento de férias, logo após clique em "Buscar" para realizar a pesquisa no banco de dados</h3>
+    <form method="post">
+        <div>
+            <label for="cpf">CPF do Colaborador:</label>
+            <input type="text" id="cpf" asp-for="CPF" placeholder="Digite o CPF">
+        </div>
+        <div>
+            <label for="dataInicio">Data início:</label>
+            <input type="text" id="dataInicio" asp-for="DataInicio" placeholder="Data início">
+        </div>
+        <div>
+            <label for="dataFim">Data fim:</label>
+            <input type="text" id="dataFim" asp-for="DataFim" placeholder="Data fim">
+        </div>
+        <button type="submit" asp-page-handler="SaveFerias">Salvar</button>
+    </form>
+</body>
+</html>

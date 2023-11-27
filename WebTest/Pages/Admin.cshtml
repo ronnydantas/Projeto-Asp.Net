@@ -1,0 +1,28 @@
+﻿@page
+@model WebTest.Pages.AdminModel
+@{
+    ViewData["Title"] = "Painel de Administração";
+}
+
+<div class="container mt-5">
+    <h1>@ViewData["Title"]</h1>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+                <a asp-page="SalarioAdmin" class="list-group-item list-group-item-action">Pagamentos Adicionais</a>
+                <a asp-page="Register" class="list-group-item list-group-item-action">Admitir Empregado</a>
+                <a asp-page="FeriasAdmin" class="list-group-item list-group-item-action">Férias</a>
+                <a asp-page="Relatorios" class="list-group-item list-group-item-action">Relatórios</a>
+                <a asp-page="AlteracaoPonto" class="list-group-item list-group-item-action">Alteração no Espelho de Ponto</a>
+                <a asp-page="TransmitirArquivos" class="list-group-item list-group-item-action">Transmitir Arquivos</a>
+                <a asp-page="BeneficiosAdmin" class="list-group-item list-group-item-action">Inclusão de Benefícios</a>
+                <a asp-page="HoleritesAdmin" class="list-group-item list-group-item-action">Holerites</a>
+                <a asp-page="Register" class="list-group-item list-group-item-action">Alterar dados dos Colaboradores</a>
+                <a asp-page="ChamadoAdmin" class="list-group-item list-group-item-action">Chamados</a>
+                <a asp-page="Rescisao" class="list-group-item list-group-item-action">Recisão de contrato</a>
+            </div>
+        </div>
+        <div class="col-md-9">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+﻿@page
+@model WebTest.Pages.SalarioAdminModel
+
+<h1>Adicionar Pagamentos Adicionais</h1>
+
+<form method="post">
+    <div>
+        <label for="cpf">CPF do Colaborador:</label>
+        <input type="text" id="cpf" asp-for="CPF" placeholder="Digite o CPF">
+    </div>
+    <div>
+        <label for="pagamentoAdicional">Pagamento Adicional:</label>
+        <input type="text" id="pagamentoAdicional" asp-for="PagamentoAdicional" placeholder="Digite o valor do pagamento adicional">
+    </div>
+    <button type="submit">Salvar</button>
+</form>

@@ -1,0 +1,22 @@
+﻿@page
+@model WebTest.Pages.FeriasColaboradorModel
+
+<h1>Férias do Colaborador</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Data de Início</th>
+            <th>Data de Fim</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ferias in Model.Ferias)
+        {
+            <tr>
+                <td>@ferias.DataInicio.ToString("dd/MM/yyyy")</td>
+                <td>@ferias.DataFim.ToString("dd/MM/yyyy")</td>
+            </tr>
+        }
+    </tbody>
+</table>

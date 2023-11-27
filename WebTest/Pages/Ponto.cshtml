@@ -1,0 +1,18 @@
+﻿@page
+@using Microsoft.AspNetCore.Identity
+@model WebTest.Pages.PontoModel
+
+<div class="text-center">
+    <h1 class="display-4">LRSV</h1>
+    <p>Bem-vindo, @User.Identity.Name.</p>
+    <form method="post">
+        <button type="submit" class="btn btn-primary">Bater Ponto</button>
+    </form>
+</div>
+
+<div class="list-group">
+    <a asp-page="PontoList" class="list-group-item list-group-item-action">Ver todos os pontos</a>
+    <a asp-page="Pagamento" class="list-group-item list-group-item-action">Ver Pagamentos</a>
+    <a asp-page="ChamadoColaborador" class="list-group-item list-group-item-action">Abrir chamado</a>
+    <a asp-page="FeriasColaborador" class="list-group-item list-group-item-action">Férias</a>
+</div>

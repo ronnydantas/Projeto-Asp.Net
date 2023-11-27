@@ -1,0 +1,35 @@
+﻿@page
+@model WebTest.Pages.ChamadoAdminModel
+@{
+    var chamados = Model.GetChamados();
+}
+
+<h1>Chamados</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Resumo</th>
+            <th>Categoria</th>
+            <th>Prioridade</th>
+            <th>Status</th>
+            <th>Data de Abertura</th>
+            <th>Nome do Usuário</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var chamado in chamados)
+        {
+            <tr>
+                <td>@chamado.Codigo</td>
+                <td>@chamado.Resumo</td>
+                <td>@chamado.Categoria</td>
+                <td>@chamado.Prioridade</td>
+                <td>@chamado.Status</td>
+                <td>@chamado.DataAbertura.ToString("dd/MM/yyyy HH:mm:ss")</td>
+                <td>@chamado.NomeUsuario</td>
+            </tr>
+        }
+    </tbody>
+</table>

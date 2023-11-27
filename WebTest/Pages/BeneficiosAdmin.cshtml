@@ -1,0 +1,31 @@
+﻿@page
+@model WebTest.Pages.BeneficiosModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tela de Benefícios</title>
+</head>
+<body>
+    <h3>Digite o CPF do colaborador para configurar benefícios</h3>
+    <form method="post">
+        <div>
+            <label for="cpf">CPF do Colaborador:</label>
+            <input type="text" id="cpf" asp-for="Cpf" placeholder="Digite o CPF">
+        </div>
+        <div>
+            <label for="va">Vale Alimentação (VA):</label>
+            <input type="text" id="va" asp-for="Va" placeholder="Digite o valor do VA">
+        </div>
+        <div>
+            <label for="vr">Vale Refeição (VR):</label>
+            <input type="text" id="vr" asp-for="Vr" placeholder="Digite o valor do VR">
+        </div>
+        <div>
+            <label for="vt">Vale Transporte (VT):</label>
+            <input type="text" id="vt" asp-for="Vt" placeholder="Digite o valor do VT">
+        </div>
+        <button type="submit" asp-page-handler="SaveBeneficios">Salvar</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿@page
+@model WebTest.Pages.RelatoriosModel
+@{
+}
+<h1>Relatório de Funcionários</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Cargo</th>
+            <th>Salário</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var funcionario in Model.Funcionarios)
+        {
+            <tr>
+                <td>@funcionario.Nome</td>
+                <td>@funcionario.Cargo</td>
+                <td>@funcionario.Salario</td>
+            </tr>
+        }
+    </tbody>
+</table>

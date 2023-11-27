@@ -1,0 +1,30 @@
+﻿@page
+@model WebTest.Pages.PontoListModel
+@{
+}
+
+<h1>Pontos</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Dia</th>
+            <th>Horário de entrada</th>
+            <th>Horário de saída</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ponto in Model.Pontos)
+        {
+            <tr>
+                <td>@ponto.Id</td>
+                <td>@ponto.NomeUsuario</td>
+                <td>@ponto.Dia.ToString("dd/MM/yyyy")</td>
+                <td>@DateTime.Today.Add(ponto.HorarioEntrada).ToString("HH:mm")</td>
+                <td>@(ponto.HorarioSaida != null ? DateTime.Today.Add(ponto.HorarioSaida.Value).ToString("HH:mm") : "")</td>
+            </tr>
+        }
+    </tbody>
+</table>

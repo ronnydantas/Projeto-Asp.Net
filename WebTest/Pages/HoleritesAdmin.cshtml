@@ -1,0 +1,23 @@
+﻿@page
+@model WebTest.Pages.HoleritesAdminModel
+@{
+}
+<h1>Holerites</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Salário</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var funcionario in Model.Funcionarios)
+        {
+            <tr>
+                <td>@funcionario.Nome</td>
+                <td>@funcionario.Salario</td>
+            </tr>
+        }
+    </tbody>
+</table>
